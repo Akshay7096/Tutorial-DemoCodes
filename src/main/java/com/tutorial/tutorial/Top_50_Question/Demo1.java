@@ -33,7 +33,7 @@ public class Demo1 {
         System.out.println("average1"+average1);
 
         OptionalDouble average2 = listOfEmp.stream().filter(Objects::nonNull).mapToDouble(Employee::getSalary).average();
-
+        System.out.println("hello");
 
         Map<String, Double> averageofSalDept = listOfEmp.stream().collect(Collectors.groupingBy(Employee::getDeptNane,Collectors.averagingDouble(Employee::getSalary)));
         System.out.println("averageofSalDept "+averageofSalDept);
