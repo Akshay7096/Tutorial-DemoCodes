@@ -1,15 +1,18 @@
 package com.tutorial.LearnCoding;
 
-public class InnerClassExample {
+public class Main {
 
-    public static class Innerclass {
-        public String m1() {
-            return  "Inner inside m1()";
-        }
-    }
     public static void main(String[] args) {
-        Innerclass inner = new Innerclass();
-        System.out.println(inner.m1());
 
+        Outerclass.Innerclass out = new Outerclass.Innerclass();
+        System.out.println(out.m1());
+    }
+}
+
+class Outerclass {
+     static class Innerclass {
+        String m1() {
+            return "Innter inside m1()";
+        }
     }
 }

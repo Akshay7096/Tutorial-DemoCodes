@@ -121,6 +121,10 @@ public class Java8MethodChearSheet {
             System.out.println("department "+department);
             employeeList.forEach(System.out::println);
         });
+
+
+       Boolean ischeck =  employees.stream().anyMatch(employee -> employee.getDepartment() == "IT");
+        System.out.println("ischeck " +ischeck);
     }
 }
 

@@ -34,10 +34,23 @@ public class SecondHighestSalery {
                     new Employee("Raj", "IT")
             );
 
-            Map<String, List<Employee>> result = employees.stream()
-                    .collect(Collectors.groupingBy(Employee::getterDept));
 
-            System.out.println(result);
+            //delete Amit
+
+
+//            List<String> collect1 = employees.stream().filter(e -> e.getterName() == "Amit").reduce(employee -> employee.getterName()).map(employee -> employee.getterName()).collect(Collectors.toList());
+//            System.out.println(collect1);
+
+            boolean b = employees.removeIf(employee -> employee.getterName() == "Amit");
+            System.out.println(b);
+//            List<String> collect = employees.stream().map(e -> e.getterName()).collect(Collectors.toList());
+//
+//            System.out.println(collect);
+
+//            Map<String, List<Employee>> result = employees.stream()
+//                    .collect(Collectors.groupingBy(Employee::getterDept));
+//
+//            System.out.println(result);
 
 
 
